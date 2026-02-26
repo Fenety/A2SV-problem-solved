@@ -16,7 +16,7 @@ class Solution:
         
         return True
     
-    #Time Complexity: O((right - left + 1) * len(ranges))
+    #Time Complexity: O(n * m) 
     #Space Complexity: O(1)
     #minutes spent: 31 minutes
 
