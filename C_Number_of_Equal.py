@@ -1,0 +1,35 @@
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+i = 0 
+j = 0
+count = 0
+
+while i < n and j < m: 
+    if a[i] < b[j]: 
+        i += 1
+    elif a[i] > b[j]: 
+        j += 1
+    else: 
+        value = a[i]
+        count_a = 0
+        count_b = 0
+        
+        while i < n and a[i] == value:
+            count_a += 1
+            i += 1
+        while j < m and b[j] == value:
+            count_b += 1
+            j += 1  
+        
+        count += count_a * count_b      
+    
+print(count)
+
+#Time Complexity: O(n + m) 
+#Space Complexity: O(1)
+#time : 32 min 
